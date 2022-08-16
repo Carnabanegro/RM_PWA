@@ -1,0 +1,15 @@
+@mixin container($width,$height,$borderRadLeft,$borderRadRight,$bgColor){
+  width: $width;
+  height: $height;
+  border-radius:$borderRadLeft  $borderRadRight  $borderRadRight $borderRadLeft;
+  background: $bgColor;
+}
+
+@mixin fontStyle($font,$fontColor,$fontSize,$lineHeight,$letterSpacing,$align){
+  font-family: $font, serif;
+  color: $fontColor;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  text-align: $align;
+}

@@ -1,0 +1,164 @@
+@import "./mixins";
+
+.characters-list,.episodes-list,.locations-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 24px;
+  padding:48px 24px 48px 24px
+}
+
+.character-card,.episode-card,.location-card{
+  @include container(430px,auto,30px,30px, #181818);
+  @include fontStyle(Rebond Grotesque Bold,#FFFFFF,16px,28px,0.01em,left);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+
+  gap:8px;
+  .elem-card{
+    font-weight: 600;
+    img{
+      padding: 0;
+      border-radius: 6px;
+
+    }
+  }
+
+  &.modal-card{
+    background: #111111;
+  }
+
+}
+
+.modal-section{
+  background-color: #181818;
+  @include fontStyle(Rebond Grotesque Bold,#FFFFFF,16px,28px,0.01em,center);
+  border-color: #111111;
+}
+
+.residents-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 48px;
+  padding:48px 24px 48px 24px;
+  img{
+    padding: 0;
+    border-radius: 6px;
+
+  }
+}
+
+/////////////STYLOS PARA ALE ///////////
+
+.container-user{
+  @include container(234px,45px,30px,30px, #181818);
+  margin-top: 36px ;
+  margin-right: 63px;
+  padding: 0 20px 0 13px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  line-height: 45px;
+  gap:11px;
+  .container-logo{
+    @include container(28px,28px,50%,50%,#282828);
+    @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,10px,28px,0.01em,left);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .user-data{
+    @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,14px,45px,0.01em,left);
+  }
+
+}
+
+.container-router{
+  width: 100%;
+}
+
+
+.container-input{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  @include container(301px,48px,30px,30px,transparent);
+  border: 1px solid #404040 ;
+  .input-text {
+    @include container(301px, 48px, 30px, 30px, transparent);
+    @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,16px,22.4px,0.5%,left);
+    padding: 8px 20px 8px 20px;
+    border: none;
+    &:focus{
+      outline: none ;
+    }
+  }
+
+
+  input:focus ~ .floating-label,
+  input:not(:focus):valid ~ .floating-label{
+    top: 4px;
+    @include fontStyle(Rebond Grotesque Semibold,#B2B7C2,10px,12px,0.015em,left);
+  }
+
+  .floating-label {
+    height: 32px;
+    position: absolute;
+    pointer-events: none;
+    top: 13.22px;
+    left: 20px;
+    transition: 0.2s ease all;
+    @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,16px,22.4px,0.5%,left);
+  }
+
+}
+
+.container-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 8px 20px 8px 20px;
+
+    @include container(auto, 48px, 30px, 30px, linear-gradient(90deg, #790DFF 0%, #2AAAE1 102.58%));
+    li{
+      a{
+        border: 0;
+        background: transparent;
+        @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,16px,22.4px,0.5%,center);
+      }
+    }
+}
+
+.button-gradient{
+  @include container(213px,48px,30px,30px,linear-gradient(90deg, #790DFF 0%, #2AAAE1 102.58%));
+  @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,16px,26px,0em,center);
+  padding: 10px 16px 10px 16px;
+}
+.button-reset{
+  @include container(auto,48px,30px,30px,linear-gradient(90deg, #790DFF 0%, #2AAAE1 102.58%));
+  @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,16px,26px,0em,center);
+  padding: 10px 16px 10px 16px;
+}
+.forget-pass{
+  @include fontStyle(Rebond Grotesque Semibold,#FFFFFF,14px,22px,0.005em,center);
+}
+
+
+
+
+
+
+
